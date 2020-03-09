@@ -1,0 +1,16 @@
+<% form_action = edit ? sub_url(sub) : subs_url %>
+<% method_value = edit ? "PATCH" : "POST" %>
+
+<form action="<%= form_action %>" method="POST">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="_method" value="<%= method_value %>">
+  <label>
+    Name:
+    <input name="sub[name]" value="<%= sub.name %>">
+  </label>
+  <label>
+    Description:
+    <textarea name="sub[description]"><%= sub.description %></textarea>
+  </label>
+  <input type="submit" value="Submit">
+</form>
