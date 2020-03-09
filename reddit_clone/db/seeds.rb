@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Post.delete_all
 Sub.delete_all
 User.delete_all
 
@@ -18,3 +19,8 @@ sub1 = Sub.create(name: 'woooosh', description: 'get wooshed', moderator_id: use
 sub2 = Sub.create(name: 'some sub', description: 'this is some sub', moderator_id: user3.id)
 sub3 = Sub.create(name: 'natureismetal', description: 'nature really is metal', moderator_id: user2.id)
 sub4 = Sub.create(name: 'last sub', description: 'the last sub', moderator_id: user1.id)
+
+post1 = Post.create(title: 'Look at this clown', url: 'clown.com',  content: 'a literal clown', user_id: user1.id, sub_id: sub1.id)
+post2 = Post.create(title: 'Clever title', url: '',  content: 'pretty clever', user_id: user2.id, sub_id: sub1.id)
+post3 = Post.create(title: 'anotha one', url: 'djk.com',  content: 'not much', user_id: user3.id, sub_id: sub3.id)
+post4 = Post.create(title: 'Last but not least', url: '',  content: 'Least', user_id: user4.id, sub_id: sub2.id)

@@ -9,10 +9,12 @@ class SubsController < ApplicationController
 
     def show
         @sub = Sub.find(params[:id])
+        render :show
     end
 
     def new
         @sub = Sub.new
+        render :new
     end
 
     def create
